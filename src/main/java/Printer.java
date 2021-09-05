@@ -1,15 +1,20 @@
 public class Printer {
-    int printerId;
+    private int printerId;
+
+    enum Colour {
+        black, red, blue
+    }
+
     public Printer(int id) {
         this.printerId = id;
     }
 
-    enum Colour {
-        black, red, blue;
+    int getPrinterId() {
+        return printerId;
     }
 
     public Enum printColour(Colour colour) {
-        System.out.printf("Your colour is: " + colour);
+        System.out.println("Your colour is: " + colour);
         return colour;
     }
 }
